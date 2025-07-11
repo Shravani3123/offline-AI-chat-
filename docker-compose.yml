@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  chatbot:
+    image: hybrid-chatbot
+    container_name: hybrid-chatbot-container
+    stdin_open: true
+    tty: true
+    command: python web_app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - C:/Users/harsh/.cache/huggingface:/root/.cache/huggingface
